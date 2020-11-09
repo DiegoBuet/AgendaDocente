@@ -29,28 +29,6 @@ var mainView = app.views.create('.view-main');
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 });
-email = "primerusuario@primero.com"
-password = "123456"
-firebase.auth().createUserWithEmailAndPassword(email, password)
-  .catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;  
-  alert(errorMessage);
-  // ...
-});
-
-firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-});
-.then( function () {
-
-  mainView.router.navigate('/about/');
-
-});
 
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
