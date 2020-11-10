@@ -19,7 +19,36 @@ var app = new Framework7({
         path: '/about/',
         url: 'about.html',
       },
+      {
+        path: '/login-screen/',
+        /*
+        We can load it from url like:
+        url: 'login-screen.html'
+        But in this example we load it just from content string
+        */
+        content: '\
+        <div class="page no-navbar no-toolbar no-swipeback">\
+            <div class="page-content login-screen-content">\
+              <div class="login-screen-title">My App</div>\
+              <form>\
+                <div class="list">\
+                </div>\
+                <div class="list">\
+                  <ul>\
+                    <li><a href="#" class="list-button">Sign In</a></li>\
+                  </ul>\
+                  <div class="block-footer">\
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\
+                    <p><a href="#" class="link back">Close Login Screen</a></p>\
+                  </div>\
+                </div>\
+              </form>\
+            </div>\
+          </div>'
+        }
+      
     ]
+    
     // ... other parameters
   });
 
@@ -44,13 +73,13 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
-  // ...
+  // 
 });
-.then( function () {
+//.then( function () {
 
-  mainView.router.navigate('/about/');
+  //mainView.router.navigate('/about/');
 
-});
+//});
 
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
@@ -64,3 +93,17 @@ $$(document).on('page:init', '.page[data-name="about"]', function (e) {
     console.log(e);
     alert('Hello');
 })
+
+// Login Screen-Modal DOM events
+$$('.login-screen').on('loginscreen:open', function (e) {
+  console.log('Login screen open')
+});
+$$('.login-screen').on('loginscreen:opened', function (e) {
+  console.log('Login screen opened')
+});
+$$('.login-screen').on('loginscreen:close', function (e) {
+  console.log('Login screen close')
+});
+$$('.login-screen').on('loginscreen:closed', function (e) {
+  console.log('Login screen closed')
+});
