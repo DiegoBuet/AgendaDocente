@@ -19,7 +19,7 @@
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>My App</title>
+    <title>Agenda Docente</title>
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css">
     <!-- Path to icons -->
@@ -43,7 +43,7 @@
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner">
                         <div class="left"><i class="icon icon-back"></i></div>
-                        <div class="title">Page Title</div>
+                        <div class="title">Agenda Docente</div>
                         <div class="right"><i class="icon icon-forward"></i></div>
                     </div>
                 </div>
@@ -63,12 +63,14 @@
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
+                      <!-- Link to another page 
                         <p>Page content goes here</p>
-                        <!-- Link to another page -->
-                        <a href="/about/" data-view=".page-content">About app</a>
+
+                          <a href="/about/" data-view=".page-content">About app</a>
+                          <p><a href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
+                        -->
 
                         <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
-                        <p><a href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
 
                         <!-- And somewhere in DOM 
                         
@@ -80,12 +82,16 @@
                             <div class="block">
                               <p>
                                 <!-- Open in login screen-modal that is already in DOM-->
-                                <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Open As Modal</a>
+                                <a href="#" class="button login-screen-open" data-login-screen=".login-screen">Ingresar Usuario</a>
                               </p>
-                              <p>
-                                <!-- Load page with login screen-->
-                                <a href="/login-screen/" class="button">Open As Page</a>
-                              </p>
+                              <!-- 
+                                <p>
+
+                                  Load page with login screen
+
+                                  <a href="/login-screen/" class="button">Abrir como página Page</a>
+                                </p>
+                                -->
                             </div>
                           </div>
                         ...
@@ -93,23 +99,23 @@
                           <div class="view">
                             <div class="page">
                               <div class="page-content login-screen-content">
-                                <div class="login-screen-title">My App</div>
+                                <div class="login-screen-title">Saludos, una gran jornada nos espera!</div>
                                 <form>
                                   <div class="list">
                                     <ul>
                                       <li class="item-content item-input">
                                         <div class="item-inner">
-                                          <div class="item-title item-label">Username</div>
+                                          <div class="item-title item-label">Nombre de usuario</div>
                                           <div class="item-input-wrap">
-                                            <input type="text" name="username" placeholder="Your username">
+                                            <input type="text" name="username" placeholder="su usuario">
                                           </div>
                                         </div>
                                       </li>
                                       <li class="item-content item-input">
                                         <div class="item-inner">
-                                          <div class="item-title item-label">Password</div>
+                                          <div class="item-title item-label">Contraseña</div>
                                           <div class="item-input-wrap">
-                                            <input type="password" name="password" placeholder="Your password">
+                                            <input type="password" name="password" placeholder="su Contraseña">
                                           </div>
                                         </div>
                                       </li>
@@ -117,11 +123,11 @@
                                   </div>
                                   <div class="list">
                                     <ul>
-                                      <li><a class="list-button" href="#">Sign In</a></li>
+                                      <li><a class="list-button" href="#">Ingresar</a></li>
                                     </ul>
                                     <div class="block-footer">
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                      <p><a class="link login-screen-close" href="#">Close Login Screen</a></p>
+                                      <p>¿Ya tienes una cuenta?</p>
+                                      <p><a class="link login-screen-close" href="#">Cerrar ventana de logeo</a></p>
                                     </div>
                                   </div>
                                 </form>

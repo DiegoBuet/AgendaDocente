@@ -19,34 +19,34 @@ var app = new Framework7({
         path: '/about/',
         url: 'about.html',
       },
-      {
+     /* { ACA SE CREA SOLA LA NUEVA VENTANA
         path: '/login-screen/',
         /*
         We can load it from url like:
         url: 'login-screen.html'
         But in this example we load it just from content string
         */
-        content: '\
+      /*  content: '\
         <div class="page no-navbar no-toolbar no-swipeback">\
             <div class="page-content login-screen-content">\
-              <div class="login-screen-title">My App</div>\
+              <div class="login-screen-title">Agenda docente</div>\
               <form>\
                 <div class="list">\
                 </div>\
                 <div class="list">\
                   <ul>\
-                    <li><a href="#" class="list-button">Sign In</a></li>\
+                    <li><a href="#" class="list-button">Ingresar</a></li>\
                   </ul>\
                   <div class="block-footer">\
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\
-                    <p><a href="#" class="link back">Close Login Screen</a></p>\
+                    <p>Bienvenido, ya tienes una cuenta?</p>\
+                    <p><a href="#" class="link back">Cerrar ventana de usuario</a></p>\
                   </div>\
                 </div>\
               </form>\
             </div>\
           </div>'
         }
-      
+      */
     ]
     
     // ... other parameters
